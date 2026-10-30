@@ -1,0 +1,79 @@
+﻿//\![raise,OnFirstBoot,0]
+
+ OnFirstBoot : all
+{
+  lastTalk 	     = ""
+  talktime 	     = "5 minutes"
+
+
+  
+  bakingstage	 = "DOUGH"
+  cookingstage	 = "EMPTY"
+  
+  autos 		 = "OFF"
+  StirCountDown	 = "OFF"
+  StirTimer 	 = "OFF"
+
+  Tempature      = "OFF"
+  timetoboil	 = "OFF"
+  pot 		     = IARRAY
+
+  nowshell 	     = "master"
+  oven			 = "closed"
+  view		     = "ground"  
+  mini		     = 0  
+  
+  cookhour		 = 0
+  cooking 		 = 0
+  cookmin		 = 0
+  cooksec		 = 0
+
+  passhour	     = 0
+  passmin		 = 0 
+  passsec 	     = 0
+
+  stroke         = 0
+  aitalkinterval = 300
+
+  
+  if reference0 == 0
+  {
+	 "\0\s[0]Hold down control to skip past dialogue\n\n\n[half]"
+	"Helloo! :]\w4 I cannot express just how unfinished this thing is,\w4 I consider it a preview at most.\n"
+	"(See the readme, f1)\n\n[half]\n"
+	"Hopefully If this interests you,\w4 you'll look out for\n"
+	"the-(if I actually finish it...)-full release.\n\n"
+	"But regardless,\w4 thank you for checking this little thing out!\w8 I learned quite a bit while making it and I've really enjoyed looking through all the submissions so far, I even have the shimejis chilling on my screen rn. :]\n\nI dont want to go into another ramble so... I'mma submit this ASAP.\n\nI guess uh,\w4 lemme know if you somehow run into bugs with this </3\w8\w8\w8\w8\n\n[half]My brain feels like its swimming or something 0-0\x\![raise,OnSetBreadPosition]\e"
+  }
+}
+
+
+ OnBoot
+{
+  lastTalk = ""
+  mini	   = 0
+  passhour = 0
+  passmin  = 0
+  passsec  = 0
+  
+  if bakingstage == ""; OnSetBreadPosition
+  OnViewGround
+  --
+  "%(normalboottalk)"
+  
+}
+
+ OnSetBreadPosition
+{
+	_brebpos = ("floor","counter"); breadpos = ANY(_brebpos)
+}
+
+ normalboottalk
+{
+	"Welcome back.\e"
+}
+
+ OnClose
+{ 
+  "Thank you for stopping by ^^\w8\w8\-" 
+}

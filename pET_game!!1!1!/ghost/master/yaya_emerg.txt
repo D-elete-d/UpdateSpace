@@ -1,0 +1,43 @@
+﻿//yaya_emerg.txt
+
+//This text file sets up an "emergency mode" of sorts for your ghost. If something you do breaks your ghost, then it will load up this file and run the .dics listed here instead. This way your ghost can remain functional and possibly give you at least some indication of what the error was
+
+
+//These define what character set your ghost will be using. Don't touch any of them.
+
+charset, UTF-8
+charset.dic, UTF-8
+charset.output, UTF-8
+charset.file, UTF-8
+charset.save, UTF-8
+charset.extension, UTF-8
+
+
+//---- Dictionary Files ---------------------------------------------------------------------
+
+//These are the .dic files your ghost will be using when in emergency mode.
+
+dicdir, yaya_base		
+dic, emerg.dic
+
+
+
+//---- Log Location -------------------------------------------------------------------------
+//I'm not entirely sure what this does, but basically don't touch it.
+
+
+msglang,english
+
+
+
+//Don't touch anything in here.
+
+
+//------------------------------------------------------------------------------
+//実行ログ
+//実行ログをayame.logに記録します。開発時には記録しておいたほうが良いです。
+//------------------------------------------------------------------------------
+// log, ayame.log	
+ignoreiolog, ID: OnSecondChange //OnSecondChange無視
+ignoreiolog, ID: OnMouse        //OnMouse系無視
+
