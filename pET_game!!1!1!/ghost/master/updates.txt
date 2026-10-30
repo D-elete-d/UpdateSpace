@@ -1,6 +1,6 @@
 charset,OSNative
 file,install.txt61bd1ed354e5c7acb5e1aa748f3106a6size=74date=2026-10-29T16:21:51
-file,readme.txt158196c12c13a7a1d23665bb2871b0ddsize=4075date=2026-10-30T13:19:10
+file,readme.txt0e32f7d0368e7cead7e15f6698c6d65esize=4030date=2026-10-30T14:19:11
 file,thumbnail0.pnga960aa230b7b936ad72375cbfaed3234size=713date=2026-10-11T20:05:08
 file,thumbnail1.png1a23b1d27502559ad661bbb9b58be5e7size=744date=2026-10-10T19:45:38
 file,thumbnail2.pngc444f14b7e46c935827a2161c50fb9d2size=711date=2026-10-13T19:35:32
@@ -9,12 +9,12 @@ file,ghost/master/descript.txt23abeb06b7435b6a8ff3d7aadec0a4afsize=203date=20
 file,ghost/master/emerg.dic02b8d3f9180767a8a06e29ebe911dc9dsize=2282date=2026-06-04T05:01:36
 file,ghost/master/meta.dicffe1c90abd981da1744c9d175e5b2de2size=5953date=2025-02-15T04:23:16
 file,ghost/master/pg_baking.dicebbded304bb69e369ba78d18f511f9e9size=1742date=2026-10-30T04:03:12
-file,ghost/master/pg_bootend.dicbfee80537e0964665b1fdde6f7c4c0b5size=1309date=2026-10-30T04:01:02
+file,ghost/master/pg_bootend.dic630d892a45492d4618aafed9a21b4fc5size=1898date=2026-10-30T15:17:11
 file,ghost/master/pg_interactions.dicda2dc81c959efa0e1a59f7d23be0a5e4size=786date=2026-10-29T13:47:42
 file,ghost/master/pg_menu.dic35257f184fb09b2050df766ccbdd81b7size=2047date=2026-10-30T03:00:20
-file,ghost/master/pg_mouse.dic97ece8a466f9acd36058c99d85a1acd3size=5488date=2026-10-29T01:05:59
-file,ghost/master/pg_other.dicfcda6f7ef9a51e088a9e8f73dd6894ddsize=3685date=2026-10-30T13:50:49
-file,ghost/master/pg_select.dic5ae7dbd97037bb6d31239b3b97cc0008size=6826date=2026-10-29T03:17:46
+file,ghost/master/pg_mouse.dic06342984bd21208b2fec17e3aa2e63a9size=5519date=2026-10-30T15:06:56
+file,ghost/master/pg_other.dic71406c1c9e771e854fd1cc8a6b0e8c5esize=3693date=2026-10-30T14:08:16
+file,ghost/master/pg_select.dic8f9072c4f1702ec6a6146a773370c086size=6845date=2026-10-30T14:28:46
 file,ghost/master/yaya.dll607f145de4def07ed9ff7f4ff7082c76size=2088960date=2026-10-14T20:06:56
 file,ghost/master/yaya.txt6625214e09bb8e92a52511abf09f94adsize=752date=2026-10-30T13:35:12
 file,ghost/master/yaya_emerg.txtd7a1f180c61ac27d07927a084d31d345size=1405date=2026-06-04T04:46:08
