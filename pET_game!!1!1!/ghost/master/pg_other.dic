@@ -1,10 +1,12 @@
 
 //This makes the ghost notify when theres a bug :>> Written by zi! :D (Thank you zi)
+
+/*
  OnErrorAlert
 {
   CLEARERRORLOG;--;"\![open,errorlog]Uh oh! Try %(lines)!\x"
 }
-
+*/
  lines
 {
   "to keep the code working"

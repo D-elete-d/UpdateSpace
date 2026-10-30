@@ -5,6 +5,8 @@ Select.RESETCOOKING{"\0\s[1]\i[600]"; pot = IARRAY; cookbegins = 0; OnCookMenu}
 
 Select.CANCEL{OnViewAbove/*"( ´･･)ﾉ(._.`))"*/}
 
+Select.cancel{}
+
 Select.QUITCOOK{OnViewGround;"\0\s[0]"; pot = IARRAY; cooking = 0}
 
 /*------------------ COOOKING SELECT! ------------------*/

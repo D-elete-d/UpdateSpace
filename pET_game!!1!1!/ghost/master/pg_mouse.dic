@@ -24,6 +24,7 @@ MouseWheelSakura
  
  OnViewAbove : all
 {
+	void : {
 	  "\0\s[1]"
 	  if cooking == 1; "\i[600]"
 	{
@@ -122,6 +123,7 @@ MouseWheelSakura
 			elseif bakingstage == "DOUGH"	;    "\i[310]"
 		}
 	}
+  }
 }
 
 
@@ -129,6 +131,7 @@ MouseWheelSakura
 //cookingstage,timetoboil, oven, baking, bakingstage
  OnViewGround : all
 {
+void : {
   "\0\s[0]"
    ONVEN
    if cooking == 1; "\i[600]"
@@ -168,6 +171,7 @@ MouseWheelSakura
 			elseif bakingstage == "DOUGH";    "\i[310]"
 		}
 	}
+  }
 }
 
 //If the bread is in the oven when the door is opened, have it-- OVEN MENU!!!

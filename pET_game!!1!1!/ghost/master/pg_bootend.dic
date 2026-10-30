@@ -41,9 +41,12 @@
   
   if reference0 == 0
   {
-	OnSetBreadPosition
-	OnViewGround
-    "\0\s[0]Helloo!\w4 Thank you for checking this little thing out, picture bare-bones, yeah thats this thing.\w8\n\w8See the readme for a longer thing, its practically just a preview tbh T vT\w4\e"
+	 "\![raise,OnSetBreadPosition]\![raise,OnViewGround]Hold down control to skip past dialogue\n\n\n[half]"
+	"Helloo! :]\w4 I cannot express just how unfinished this thing is,\w4 I consider it a preview at most.\n"
+	"(See the readme, f1)\n\n[half]\n"
+	"Hopefully If this interests you,\w4 you'll look out for\n"
+	"the-(if I actually finish it...)-full release.\n\n"
+	"But regardless,\w4 thank you for checking this little thing out!\w8 I learned quite a bit while making it and I've really enjoyed looking through all the submissions so far, I even have the shimejis chilling on my screen rn. :]\n\nI dont want to go into another ramble so... I'mma submit this ASAP.\n\nI guess uh,\w4 lemme know if you somehow run into bugs with this </3\w8\w8\w8\w8\w8\w8\w8\n\n[half]My brain feels like its swimming or something 0-0\e"
   }
 }
 

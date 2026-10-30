@@ -19,7 +19,7 @@
  (Nice way to say there is absolutly nothing to do. XD) Its currently 3AM--OHH uhh submitting digital pet gone wrong at 3am, cops called???...(._.`)) 
  
  This was a pretty good learning expirience for me, mainly that I NEED to plan out the shell, not just rawdog it. 
- I legit re-did it like 4 times, which took so long.. (not redrawing it, just numbering the images--and animations.) But also I just wanted to feel like I was getting something done with the ghost to make up for the time I wasnt spending on it. Throughout the whole thing I had to remind myself that progress is progress, and that it was more important for me to work at my own pace so I could actually enjoy the process. You cant edit something that doesn't exist. 
+ I legit re-did it like 4 times, which took so long.. (not redrawing it, just numbering the images--and animations.) But also I just wanted to feel like I was getting something done with the ghost to make up for the time I wasnt spending on it. Throughout the whole thing I had to remind myself that progress is progress, and that it was more important for me to work at my own pace so I could actually enjoy the process.
  
  Orignally I was messing around with the idea of a sentient game window that judged the user depending on how they treated the desktop pet inside it. 
  (Which I'm still kinda interested in.. :3) But eventually scrapped it while working on the shell. I decided to lean fully into caring for the desktop pet, which was eventually decided to be a loaf of bread. (Its 3:50 now, this isn't that much text whys time flying?? D:)
