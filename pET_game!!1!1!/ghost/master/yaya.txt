@@ -14,7 +14,7 @@ dic, pg_mouse.dic
 dic, pg_other.dic
 dic, pg_select.dic
 dic, pg_interactions.dic
-
+dic, meta.dic
 
 msglang,english
 
