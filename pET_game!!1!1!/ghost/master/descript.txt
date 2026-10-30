@@ -1,0 +1,15 @@
+﻿
+charset,UTF-8
+
+name,pET_game!!1!1!
+type,ghost
+
+sakura.name,Bread
+
+craftman,Cherrie
+craftmanurl,https://github.com/D-elete-d/
+
+sstp.allowunspecifiedsend,0
+shiori,yaya.dll
+
+icon,bread.ico

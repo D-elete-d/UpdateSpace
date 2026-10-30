@@ -1,0 +1,91 @@
+﻿
+//"\![*]\q[name,function]"
+
+
+ OnSettingsMenu : all
+{
+  "\c\_q"
+  "\![*]\q[Talk rate,talkinter]\n"
+  "\![*]\q[Auto stir,AutomaticStir]: %(autos)\n"
+  /*
+  Settings I should add: 
+  The minimize button actually minimizing the ghost.
+  Where the bread "spawns" 
+  See about adding a remove/hide tooltips
+  */
+  --
+  "\n\n\![*]\q[Close menu,CANCEL]\e"
+}
+
+ // OnPotMenu : all
+// {
+  // "\![*]\q[Burner,TempatureMenu]\n"
+  // --
+  // "\n\n\![*]\q[Close menu,CANCEL]\e"
+// }
+
+ OnMySandwitchIllHaveAMenu : all
+{
+  "%(CrunchStatus)\e"
+  /*
+  --
+  "\n\n\![*]\q[Close menu,CANCEL]\e"
+  */
+}
+
+ OnCookMenu : all
+{
+				OnViewAbove
+  "\![*]\q[add vegtables to pot,OnVeggies]\n"
+  "\![*]\q[Beans & Lentils,OnBeans]\n"
+  "\![*]\q[add Meat to pot,OnMeat]\n"
+					--
+  if ARRAYSIZE(pot) >= 5;"\n\![*]\q[continue,OnToCook]"//Add a check for if the pot is just full of water for spaghetti :3
+					--
+  if ARRAYSIZE(pot) >= 1;"\n\n\![*]\q[Remove all,RESETCOOKING]"
+					--
+  "\n\n[half]\![*]\q[Close menu,CANCEL]\n"					
+					--
+  "\n\n[half]\![*]\q[STOP,QUITCOOK]\n\e"
+}
+
+
+  OnVeggies : all
+{OnViewAbove
+"\c\_q"
+    "\![*]\q[carrots,carrot]\n"
+    "\![*]\q[celery,celery]\n"
+    "\![*]\q[Peas,pea]\n"
+    "\![*]\q[Potato,potato]\n"
+				--
+  "\n\n[half]\![*]\q[back,OnCookMenu]\e"
+}
+
+  OnBeans : all
+{OnViewAbove
+	"\c\_q"
+    "\![*]\q[chickpeas,garbonzo]\n"
+    "\![*]\q[Green lentils,green]\n"
+    "\![*]\q[Red lentils,red]\n"
+				--
+  "\n\n[half]\![*]\q[back,OnCookMenu]\e"
+}
+
+  OnMeat : all
+{OnViewAbove
+	"\c\_q"
+    "\![*]\q[Beef,beef]\n"
+    "\![*]\q[Chicken,chikn]\n"
+				--
+  "\n\n[half]\![*]\q[back,OnCookMenu]\e"
+}
+
+
+ TempatureMenu : all
+{
+  "\![*]\q[Off,BurnerOff]\n"
+  "low\n \![*]\q[1,BurnerOn1] \![*]\q[2,BurnerOn2] \![*]\q[3,BurnerOn3]\n"
+  "medium\n \![*]\q[4,BurnerOn4] \![*]\q[5,BurnerOn5] \![*]\q[6,BurnerOn6]\n"
+  "high\n \![*]\q[7,BurnerOn7] \![*]\q[8,BurnerOn8] \![*]\q[9,BurnerOn9]\n\n[half]"
+  "\![*]\q[back,OnPotMenu] \n\![*]\q[Close menu,CANCEL]\e"
+}

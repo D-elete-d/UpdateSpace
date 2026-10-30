@@ -1,0 +1,378 @@
+
+/*------------------ OTHER ------------------*/
+
+Select.RESETCOOKING{"\0\s[1]\i[600]"; pot = IARRAY; cookbegins = 0; OnCookMenu}
+
+Select.CANCEL{OnViewAbove/*"( ´･･)ﾉ(._.`))"*/}
+
+Select.QUITCOOK{OnViewGround;"\0\s[0]"; pot = IARRAY; cooking = 0}
+
+/*------------------ COOOKING SELECT! ------------------*/
+
+
+/*--------- Beans & Lentils ---------*/
+
+Select.garbonzo : all
+{
+    _search = ASEARCH("Chickpeas",pot)
+    if _search != -1
+    {
+        pot[_search] = IARRAY
+		"\![anim,stop,2604]"
+		--
+		OnBeans
+    }
+	else{ 
+	pot ,= "Chickpeas"
+	"\i[2604]"
+	--
+	OnBeans}
+}
+
+Select.Speghetti : all
+{
+    _search = ASEARCH("Speghetti",pot)
+    if _search != -1
+    {
+        pot[_search] = IARRAY
+		"\![anim,stop,2000]"
+		--
+		OnBeans
+    }
+	else{ 
+	pot ,= ""
+	"\i[2000]"
+	--
+	OnBeans}
+}
+
+Select.red : all
+{
+    _search = ASEARCH("Red lentils",pot)
+    if _search != -1
+    {
+        pot[_search] = IARRAY
+		"\![anim,stop,2001]"
+		--
+		OnBeans
+    }
+	else{ 
+	pot ,= "Red lentils"
+	"\i[2001]"
+	--
+	OnBeans}
+}
+
+Select.green : all
+{
+    _search = ASEARCH("Green Lentils",pot)
+    if _search != -1
+    {
+        pot[_search] = IARRAY
+		"\![anim,stop,2002]"
+		--
+		OnBeans
+    }
+	else{ 
+	pot ,= "Green Lentils"
+	"\i[2002]"
+	--
+	OnBeans}
+}
+
+
+
+/*---------- Veggies ----------*/
+
+Select.carrot : all
+{
+    _search = ASEARCH("Carrot",pot)
+    if _search != -1
+    {
+        pot[_search] = IARRAY
+		"\![anim,stop,2600]"
+		--
+		OnVeggies
+    }
+	else{ 
+	pot ,= "Carrot"
+	"\i[2600]"
+	--
+	OnVeggies}
+}
+
+Select.pea : all
+{
+    _search = ASEARCH("Pea",pot)
+    if _search != -1
+    {
+        pot[_search] = IARRAY
+		"\![anim,stop,2601]"
+		--
+		OnVeggies
+    }
+	else{ 
+	pot ,= "Pea"
+	"\i[2601]"
+	--
+	OnVeggies}
+}
+
+Select.potato : all
+{
+    _search = ASEARCH("Potato",pot)
+    if _search != -1
+    {
+        pot[_search] = IARRAY
+		"\![anim,stop,2602]"
+		--
+		OnVeggies
+    }
+	else{ 
+	pot ,= "Potato"
+	"\i[2602]"
+	--
+	OnVeggies}
+}
+
+Select.celery : all
+{
+    _search = ASEARCH("Celery",pot)
+    if _search != -1
+    {
+        pot[_search] = IARRAY
+		"\![anim,stop,2603]"
+		--
+		OnVeggies
+    }
+	else{ 
+	pot ,= "Celery"
+	"\i[2603]"
+	--
+	OnVeggies}
+}
+
+
+
+/*---------- Meat ----------*/
+
+Select.chikn : all
+{
+    _search = ASEARCH("Chicken",pot)
+    if _search != -1
+    {
+        pot[_search] = IARRAY
+		"\![anim,stop,2901]"
+		--
+		OnMeat
+    }
+	else{ 
+	pot ,= "Chicken"
+	"\i[2901]"
+	--
+	OnMeat}
+}
+
+Select.beef : all
+{
+    _search = ASEARCH("Beef",pot)
+    if _search != -1
+    {
+        pot[_search] = IARRAY
+		"\![anim,stop,2900]"
+		--
+		OnMeat
+    }
+	else{ 
+	pot ,= "Beef"
+	"\i[2900]"
+	--
+	OnMeat}
+}
+
+
+
+/*---------- SPICES SELECT MENUS ----------*/
+
+/*
+Select. : all
+{
+    _search = ASEARCH("",pot)
+    if _search != -1
+    {
+        pot[_search] = IARRAY
+		"\![anim,stop,]"
+		--
+		Oningredient
+    }
+	else{ 
+	pot ,= ""
+	"\i[]"
+	--
+	Oningredient}
+}
+*/
+
+
+/*---------- TEMPATURE SELECT ----------*/
+
+
+Select.BurnerOff
+{
+	Tempature  = "OFF"
+	StirTimer  = "OFF"
+	timetoboil = "OFF"
+}
+
+Select.BurnerOn1
+{
+	Tempature  = 1
+	StirTimer  = 2100 //every 35 minutes
+	
+	if timetoboil == "OFF"; timetoboil = 7200//2 hours
+	elseif timetoboil == "boiling" || timetoboil == "boiled"{/*(_　_)。゜watched pots never boil..。*/}
+}
+
+Select.BurnerOn2
+{
+	Tempature  = 2
+	StirTimer  = 1800 //every 30 minutes
+	
+	if timetoboil == "OFF"; timetoboil = 5400//1h 30m
+   elseif timetoboil == "boiling" || timetoboil == "boiled"{}
+}	
+
+Select.BurnerOn3
+{
+	Tempature  = 3
+	StirTimer  = 1500 //every 25 mins
+	
+	if timetoboil == "OFF"; timetoboil = 4800//1h 20m
+   elseif timetoboil == "boiling" || timetoboil == "boiled"{}
+}	
+
+Select.BurnerOn4
+{
+	Tempature  = 4
+	StirTimer  = 1200 //every 20 minutes
+	
+	if timetoboil == "OFF"; timetoboil = 3600//1h
+   elseif timetoboil == "boiling" || timetoboil == "boiled"{}
+}	
+
+Select.BurnerOn5
+{
+	Tempature  = 5
+	StirTimer  = 900 //every 15 minutes
+	
+	if timetoboil == "OFF"; timetoboil = 3000
+   elseif timetoboil == "boiling" || timetoboil == "boiled"{}
+}	
+
+Select.BurnerOn6
+{
+	Tempature  = 6
+	StirTimer  = 600 //every 10 minutes
+	
+	if timetoboil == "OFF"; timetoboil = 2700//45m
+   elseif timetoboil == "boiling" || timetoboil == "boiled"{}
+}	
+
+Select.BurnerOn7
+{
+	Tempature  = 7
+	StirTimer  = 480 //every 8 minutes
+	
+	if timetoboil == "OFF"; timetoboil = 2400//40m
+   elseif timetoboil == "boiling" || timetoboil == "boiled"{}
+}	
+
+Select.BurnerOn8
+{
+	Tempature  = 8
+	StirTimer  = 300 //every 5 minutes
+	
+	if timetoboil == "OFF"; timetoboil = 2100//35
+   elseif timetoboil == "boiling" || timetoboil == "boiled"{}
+}	
+
+Select.BurnerOn9
+{
+	Tempature  = 9
+	StirTimer  = 180 //every 3 minutes
+	
+	if timetoboil == "OFF"; timetoboil = 1500//25
+   elseif timetoboil == "boiling" || timetoboil == "boiled"{}
+}
+
+
+/*------------------ SETTINGS ------------------*/
+
+ Select.AutomaticStir
+{
+  if autos == "OFF"{autos = "ON"; OnSettingsMenu}
+  else; autos = "OFF"; OnSettingsMenu
+}
+
+
+Select.talkinter : all
+{
+  "\0\s[0]\b2The interval is currently set to %(talktime).\n\n[half]"
+  "\![*]\q[Every 30 seconds,TALKMAX]\n"
+  "\![*]\q[Every minute,TALKHIGH]\n"
+  "\![*]\q[Every 3 minutes,TALKNORMAL]\n"
+  "\![*]\q[Every 5 minutes,TALKPOOR]\n"
+  "\![*]\q[Don't speak,TALKNONE]\n\n[half]"
+  "\![*]\q[Don't change,TalksTill]\e"
+}
+
+Select.TalksTill
+{
+  "\0\s[0]No change to the talk rate.\e"
+}
+
+//If the user chooses every 30 seconds.
+Select.TALKMAX
+{
+   talktime = "30 seconds" //this sets up the displayed value properly
+   aitalkinterval = 30 //this changes the actual rate
+		
+   "\0\s[0]We will speak every 30 seconds.\e"
+}
+
+//If the user chooses every minute.
+Select.TALKHIGH
+{
+  talktime = "minute"
+  aitalkinterval = 60
+		
+  "\0\s[0]We will speak every minute.\e"
+}
+
+//If the user chooses every three minutes.
+Select.TALKNORMAL
+{
+  talktime = "3 minutes"
+  aitalkinterval = 180
+		
+  "\0\s[0]We will speak every three minutes.\e"
+}
+
+//If the user chooses every five minutes. This is the default rate the ghost will start up in, as seen in bootend.dic.
+Select.TALKPOOR
+{
+  talktime = "5 minutes"
+  aitalkinterval = 300
+		
+  "\0\s[0]We will speak every five minutes.\e"
+}
+
+//If the user chooses to not have them speak. This is one case where you MIGHT want to make talktime equal something else, if you have a snappier way of saying the ghost won't talk. Make sure it flows well in your menus though, since it will be displayed in your config menu.
+
+Select.TALKNONE
+{
+  talktime = "...actually we won't talk at all"
+  aitalkinterval = 0
+		
+  "\0\s[0]We will not speak.\e"
+}

@@ -1,0 +1,522 @@
+ descript
+{
+    version,1
+}
+
+//Move the shelf up more
+//Make the wall area on the above surface longer (move the visual stuff down more.. maybe shrink the counter??...no.)
+//add two more surfaces for the  bread, completly burnt and lighly cooked
+//OHH IDEA make a smoke/heat(??) animation that will go outside of the title if its minimized to show that the pot needs to be boiled!
+
+
+//Draw a timer that can be interacted with and show how long the foods been cooking. (oven too)
+ surface0
+{
+ element0,base,k_ground.png,0,0
+ collision0,318,144,475,215,Oven
+ collision1,104,38,481,128,above
+
+//cutting board
+   animation392.interval,runonce
+   animation392.pattern0,overlay,41,0,0,0
+
+
+ 
+//————————-oven-————————  
+//closed \i[398]
+   animation398.interval,runonce
+   animation398.pattern0,stop,399
+   animation398.pattern1,overlay,13,0,0,0
+   animation398.collision,312,137,479,146,Handle
+//open \i[399]
+   animation399.interval,never
+   animation399.pattern0,stop,398
+   animation399.pattern1,overlay,14,0,0,0
+   animation399.collision,314,204,479,229,Handle
+   
+//————-kitchen itemz-————
+ 
+
+//spoon resting
+   animation380.interval,never
+   animation380.pattern0,stop,400
+   animation380.pattern1,overlay,100,0,0,0
+
+//————————-Cooking-———————— 
+
+// Stirring animation
+   animation400.interval,never
+   animation400.pattern0,overlay,100,0,0,0
+   animation400.pattern1,overlay,101,0,0,0
+   animation400.pattern2,overlay,102,0,0,0
+   animation400.pattern3,overlay,103,0,0,0
+   animation400.pattern4,overlay,104,0,0,0
+   animation400.pattern5,overlay,105,0,0,0
+   animation400.pattern6,overlay,106,0,0,0
+   animation400.pattern7,start,380
+   
+//steam
+   animation500.interval,never
+   animation500.pattern0,overlay,300,0,0,0
+
+//pot
+   animation600.interval,never
+   animation600.pattern0,overlay,40,0,0,0
+   
+//lid
+   // animation610.interval,never
+   // animation610.pattern10,overlay,,0,0,0
+   
+//boiling
+   animation660.interval,never
+   animation660.pattern0,overlay,200,0,0,0
+}
+
+
+
+//————————-ABOVE VIEW-————————
+
+
+
+ surface1
+{
+  element0,base,k_above.png,0,0,0
+  collision0,104,236,481,326,below
+  // collision1,312,233,480,248,Handle 
+  
+//cutting board
+   animation90.interval,runonce
+   animation90.pattern0,overlay,61,0,0,0
+  
+  
+  
+  
+//————————-Cooking-———————— 
+
+// //spoon resting
+   // animation370.interval,runonce
+   // animation370.stop,400
+   // animation370.pattern0,overlay,15,0,0,0
+
+// // Stirring animation
+   // animation400.interval,never
+   // animation400.pattern0,overlay,,0,0,0
+   // animation400.start,
+
+   
+   
+// //steam
+   // animation500.interval,never
+   // animation500.pattern0,overlay,300,0,0,0
+
+//pot
+   animation600.interval,never
+   animation600.pattern0,overlay,60,0,0,0
+   
+//lid
+   // animation610.interval,never
+   // animation610.pattern10,overlay,,0,0,0
+   
+//boiling
+   // animation700.interval,never
+   // animation700.pattern10,overlay,,0,0,0
+
+
+//( RAW )
+
+
+//————————-BOTTOM LAYER-———————— 
+
+  //spaghetti
+  animation2000.interval,never
+  animation2000.pattern0,overlay,2000,0,0,0
+  
+//red  lentils
+  animation2001.interval,never
+  animation2001.pattern0,overlay,2001,0,0,0
+
+//green lentils
+  animation2002.interval,never
+  animation2002.pattern0,overlay,2002,0,0,0
+
+
+
+//————————-MIDDLE LAYER-———————— 
+
+//carrots
+  animation2600.interval,never
+  animation2600.pattern0,overlay,2600,0,0,0
+  
+//peas
+  animation2601.interval,never
+  animation2601.pattern0,overlay,2601,0,0,0
+  
+//potatos
+  animation2602.interval,never
+  animation2602.pattern0,overlay,2602,0,0,0
+  
+//celery
+  animation2603.interval,never
+  animation2603.pattern0,overlay,2603,0,0,0
+
+//Garbonzobeans
+  animation2604.interval,never
+  animation2604.pattern0,overlay,2604,0,0,0
+  
+//————————-TOP LAYER-———————— 
+
+//beef
+  animation2900.interval,never
+  animation2900.pattern0,overlay,2900,0,0,0
+  
+//chicken
+  animation2901.interval,never
+  animation2901.pattern0,overlay,2901,0,0,0
+
+
+
+//———————-MID-ART-(WIP)-———————
+
+//——Beans-Lentils-ect——
+
+//spaghetti
+  animation3000.interval,never
+  animation3000.pattern0,overlay,3000,0,0,0
+
+
+
+
+//————————-Veggies-—————
+
+
+
+
+//————————-Meat-———————— 
+
+//Chicken
+  animation3001.interval,never
+  animation3001.pattern0,overlay,3001,0,0,0
+  
+
+//—————————-FINISHED-(WIP)-—————————
+
+//————————-Veggies-———————— 
+
+
+
+//————————-Meat-———————— 
+
+
+
+//——Beans-Lentils-ect——
+
+//spaghetti
+  animation4000.interval,never
+  animation4000.pattern0,overlay,4000,0,0,0
+}
+
+ sakura.tooltips
+{
+  close,Quit?
+  info,Bread-venture
+  minimize,Minimize
+  resize,Doesn't work ¯\_(ツ)_/¯
+  settings,Settings
+  above,Change perspective?
+  below,Change perspective?
+  pot,Start Cooking (unfinished!!)
+  clean,Does... anything work, dude? (._. )>
+  water,(っ °Д °;)っ) Doesn't work
+}
+
+ sakura.cursor
+{
+  mousehover0,Spoon,system:hand
+  mousewheel0,Spoon,system:grip
+  
+  mouseup1,Handle,system:hand
+  mousedown1,Handle,system:grip
+  
+  mouseup2,BreadDough,system:hand
+  mousedown2,BreadDough,system:grip
+}
+
+ surface1000
+{
+//————————————————-Minimized-————————————————
+  
+  collision0,454,0,485,21,close
+  collision1,394,0,425,21,minimize
+  collision2,424,0,455,21,resize
+  
+  //Light top
+  animation10001.interval,bind
+  animation10001.pattern0,overlay,10000,0,0,0
+  
+  //Dark top
+  animation10002.interval,bind
+  animation10002.pattern0,overlay,10001,0,0,0
+  
+  //Pink top
+  animation10003.interval,bind
+  animation10003.pattern0,overlay,10002,0,0,0
+  
+  //blue top
+  animation10004.interval,bind
+  animation10004.pattern0,overlay,10003,0,0,0
+  
+  //green top
+  animation10005.interval,bind
+  animation10005.pattern0,overlay,10004,0,0,0
+  
+  //warning
+  // animation20000.interval,never
+  // animation20000.pattern0,overlay,,0,0,0
+}
+
+ surface.append0-1
+{
+//————————————————-Top-————————————————
+  
+  //Top
+  animation10000.interval,bind
+  animation10000.pattern0,overlay,10,0,0,0
+  
+  //Light top
+  animation10001.interval,bind
+  animation10001.pattern0,overlay,20000,0,0,0
+  
+  //Dark top
+  animation10002.interval,bind
+  animation10002.pattern0,overlay,20001,0,0,0
+  
+  //Pink top
+  animation10003.interval,bind
+  animation10003.pattern0,overlay,20002,0,0,0
+  
+  //blue top
+  animation10004.interval,bind
+  animation10004.pattern0,overlay,20003,0,0,0
+  
+  //green top
+  animation10005.interval,bind
+  animation10005.pattern0,overlay,20004,0,0,0
+  
+//——————————————-Body-————————————————
+  
+  //UI
+  animation20000.interval,bind
+  animation20000.pattern0,overlay,30000,0,0,0
+
+  //Light body
+  animation20001.interval,bind
+  animation20001.pattern0,overlay,30001,0,0,0
+  
+  //Dark body
+  animation20002.interval,bind
+  animation20002.pattern0,overlay,30002,0,0,0
+  
+  //Pink body
+  animation20003.interval,bind
+  animation20003.pattern0,overlay,30003,0,0,0
+  
+  //blue body
+  animation20004.interval,bind
+  animation20004.pattern0,overlay,30004,0,0,0
+  
+  //green body
+  animation20005.interval,bind
+  animation20005.pattern0,overlay,30005,0,0,0
+  
+  
+//————————————————-UI-————————————————
+  
+  //technical
+  collision101,4,309,21,326,info
+  collision102,457,0,481,17,close
+  collision103,426,0,453,19,resize
+  collision104,397,0,421,17,minimize
+  // icons
+  collision105,24,88,79,117,water
+  collision106,30,196,75,229,pot
+  collision107,26,136,79,179,clean
+  collision100,34,252,73,287,settings
+}
+
+
+// https://fsymbols.com/generators/tarty/
+// ██████╗░██████╗░███████╗░█████╗░██████╗░
+// ██╔══██╗██╔══██╗██╔════╝██╔══██╗██╔══██╗
+// ██████╦╝██████╔╝█████╗░░███████║██║░░██║
+// ██╔══██╗██╔══██╗██╔══╝░░██╔══██║██║░░██║
+// ██████╦╝██║░░██║███████╗██║░░██║██████╔╝
+// ╚═════╝░╚═╝░░╚═╝╚══════╝╚═╝░░╚═╝╚═════╝░
+
+surface.append0
+{
+//————————-floor-bread-————————
+ 
+//dough
+ animation110.interval,never
+ animation110.pattern0,overlay,1100,0,115,286
+ animation110.collision1000,115,283,240,308,Bread
+ 
+ //99% dough
+ animation111.interval,never
+ animation111.pattern0,overlay,1101,0,115,286
+ animation111.collision1000,115,283,240,308,Bread
+ 
+ //toasty :P
+ animation120.interval,never
+ animation120.pattern0,overlay,1200,0,115,286
+ animation120.collision1000,115,283,240,308,Bread
+ 
+ //soft on the inside, nice crunch!
+ animation130.interval,never
+ animation130.pattern0,overlay,1300,0,115,286
+ animation130.collision1000,115,283,240,308,Bread
+ 
+ //Isn't the bread supposed to begin burning from the top...?
+ animation140.interval,never
+ animation140.pattern0,overlay,1400,0,115,286
+ animation140.collision1000,115,283,240,308,Bread
+ 
+ //Charred
+ animation150.interval,never
+ animation150.pattern0,overlay,1500,0,110,96
+ animation150.collision1000,115,283,240,308,Bread
+ 
+//————————-Counter-bread-————————
+
+ //dough
+ animation210.interval,never
+ animation210.pattern0,overlay,1100,0,145,96
+ animation210.collision1000,109,93,234,118,Bread
+ 
+ //99% dough
+ animation211.interval,never
+ animation211.pattern0,overlay,1101,0,145,96
+ animation211.collision1000,109,93,234,118,Bread
+ 
+ //toasty :P
+ animation220.interval,never
+ animation220.pattern0,overlay,1200,0,145,96
+ animation220.collision1000,109,93,234,118,Bread
+ 
+ //soft on the inside, nice crunch!
+ animation230.interval,never
+ animation230.pattern0,overlay,1300,0,145,96
+ animation230.collision1000,109,93,234,118,Bread
+ 
+ //Isn't the bread supposed to begin burning from the top...?
+ animation240.interval,never
+ animation240.pattern0,overlay,1400,0,145,96
+ animation240.collision1000,109,93,234,118,Bread
+ 
+ //Charred
+ animation250.interval,never
+ animation250.pattern0,overlay,1500,0,145,96
+ animation250.collision1000,109,93,234,118,Bread
+ 
+//————————-oven-bread-————————
+
+ //dough
+ animation310.interval,never
+ animation310.pattern0,overlay,1100,0,337,183
+ 
+ //99% dough
+ animation311.interval,never
+ animation311.pattern0,overlay,1101,0,337,183
+ 
+ //toasty :P
+ animation320.interval,never
+ animation320.pattern0,overlay,1200,0,337,183
+ 
+ //soft on the inside, nice crunch!
+ animation330.interval,never
+ animation330.pattern0,overlay,1300,0,337,183
+ 
+ //Isn't the bread supposed to begin burning from the top...?
+ animation340.interval,never
+ animation340.pattern0,overlay,1400,0,337,183
+ 
+ //Charred
+ animation350.interval,never
+ animation350.pattern0,overlay,1500,0,337,183
+}
+
+//Visual diffrence so I know which is whichh YIPPEEEE
+// ██████╗░██████╗░███████╗░█████╗░██████╗░
+// ██╔══██╗██╔══██╗██╔════╝██╔══██╗██╔══██╗
+// ██████╦╝██████╔╝█████╗░░███████║██║░░██║
+// ██╔══██╗██╔══██╗██╔══╝░░██╔══██║██║░░██║
+// ██████╦╝██║░░██║███████╗██║░░██║██████╔╝
+// ╚═════╝░╚═╝░░╚═╝╚══════╝╚═╝░░╚═╝╚═════╝░
+
+surface.append1
+{
+  //————————-floor-bread-————————
+ 
+ //dough
+ animation110.interval,never
+ animation110.pattern0,overlay,1600,0,109,269
+ animation110.collision1000,108,268,234,290,Bread
+ 
+ //99% dough
+ animation111.interval,never
+ animation111.pattern0,overlay,1101,0,109,269
+ animation111.collision1000,108,268,234,290,Bread
+ 
+ //toasty :P
+ animation120.interval,never
+ animation120.pattern0,overlay,1650,0,109,269
+ animation120.collision1000,108,268,234,290,Bread
+ 
+ //soft on the inside, nice crunch!
+ animation130.interval,never
+ animation130.pattern0,overlay,1750,0,109,269
+ animation130.collision1000,108,268,234,290,Bread
+ 
+ //Isn't the bread supposed to begin burning from the top...?
+ animation140.interval,never
+ animation140.pattern0,overlay,1850,0,109,269
+ animation140.collision1000,108,268,234,290,Bread
+ 
+ //Charred
+ animation150.interval,never
+ animation150.pattern0,overlay,1900,0,109,269
+ animation150.collision1000,108,268,234,290,Bread
+ 
+//————————-Counter-Cutting-Board-bread-————————
+
+ 
+//dough
+animation210.interval,never
+animation210.pattern0,overlay,1600,0,145,174
+animation210.collision1000,143,172,269,194,Bread
+ 
+//99% dough
+animation211.interval,never
+animation211.pattern0,overlay,1101,0,109,269
+animation211.collision1000,143,172,269,194,Bread
+ 
+//toasty :P
+animation220.interval,never
+animation220.pattern0,overlay,1650,0,145,174
+animation220.collision1000,143,172,269,194,Bread
+ 
+//soft on the inside, nice crunch!
+animation230.interval,never
+animation230.pattern0,overlay,1750,0,145,174
+animation230.collision1000,143,172,269,194,Bread
+ 
+//Isn't the bread supposed to begin burning from the top...?
+animation240.interval,never
+animation240.pattern0,overlay,1850,0,145,174
+animation240.collision1000,143,172,269,194,Bread
+ 
+//Charred
+animation250.interval,never
+animation250.pattern0,overlay,1900,0,145,174
+animation250.collision1000,143,172,269,194,Bread
+}

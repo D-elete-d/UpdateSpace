@@ -1,0 +1,235 @@
+﻿/*
+OnViewAbove
+OnViewGround
+
+MouseDoubleClick
+MouseClick
+MouseMoveSakura
+MouseWheelSakura
+*/
+
+/*------------------- View changer -------------------*/
+
+ Minimize
+{
+  if mini == 0 {mini = 1 ;--; "\0\s[1000]\e"}
+  else; mini = 0 ;--; OnViewGround
+}
+
+ Minimized
+{
+  "\0\s[1000]"
+  //Add the warning animations (alert for when the pot is boiling, burning needs to be mixed ect)
+}
+ 
+ OnViewAbove : all
+{
+	  "\0\s[1]"
+	  if cooking == 1; "\i[600]"
+	{
+		  if cookingstage == "RAW" || cookingstage == "FILL"
+		{
+			  foreach pot; _ingredient
+			{
+				  case _ingredient
+				{
+					when "Carrot";  	   "\i[2600]"
+					when "Celery";  	   "\i[2603]"
+					when "Pea";  		   "\i[2601]"
+					when "Potato";  	   "\i[2602]"
+					when "Chickpeas";      "\i[2604]"
+					when "Beef";		   "\i[2900]"
+					when "Chicken";  	   "\i[2901]"
+					when "Speghetti";	   "\i[2000]"
+					when "Red lentils";    "\i[2001]"
+					when "Green Lentils";  "\i[2002]"
+				}
+			}
+		}
+		  elseif cookingstage == "MID"
+		{
+			  foreach pot; _ingredient
+			{
+				  case _ingredient
+				{
+					when "Carrot";  	   "\i[]"
+					when "Celery";  	   "\i[]"
+					when "Pea";  		   "\i[]"
+					when "Potato";  	   "\i[]"
+					when "Chickpeas";      "\i[]"
+					when "Beef";		   "\i[]"
+					when "Chicken";  	   "\i[3001]"
+					when "Speghetti";	   "\i[3000]"
+					when "Red lentils";    "\i[]"
+					when "Green Lentils";  "\i[]"
+				}
+			}
+		}
+		  elseif cookingstage == "finished"
+		{
+			  foreach pot; _ingredient
+			{
+				  case _ingredient
+				{
+					when "Carrot";  	   "\i[]"
+					when "Celery";  	   "\i[]"
+					when "Pea";  		   "\i[]"
+					when "Potato";  	   "\i[]"
+					when "Chickpeas";      "\i[]"
+					when "Beef";		   "\i[]"
+					when "Chicken";  	   "\i[]"
+					when "Speghetti";	   "\i[]"
+					when "Red lentils";    "\i[]"
+					when "Green Lentils";  "\i[]"
+				}
+			}
+		}
+	}
+	
+	
+	
+	if baking  == 1
+   {
+	   
+   }
+   else
+   {
+		 if breadpos == "floor"
+		{
+				if bakingstage == "BURNT"	;    "\i[150]"
+			elseif bakingstage == "BURNING"	;    "\i[140]"
+			elseif bakingstage == "CRUNCH"	;    "\i[130]"
+			elseif bakingstage == "toasty"	;    "\i[120]"
+			elseif bakingstage == "toasting";    "\i[111]"
+			elseif bakingstage == "DOUGH"	;    "\i[110]"
+		}
+		 elseif breadpos == "counter"
+		{
+				if bakingstage == "BURNT"   ;    "\i[250]"
+			elseif bakingstage == "BURNING" ;    "\i[240]"
+			elseif bakingstage == "CRUNCH"  ;    "\i[230]"
+			elseif bakingstage == "toasty"  ;    "\i[220]"
+			elseif bakingstage == "toasting";    "\i[211]"
+			elseif bakingstage == "DOUGH"	;    "\i[210]"
+		}
+		 elseif breadpos == "oven"//iF THEYRE IN THE OVENNN
+		{
+				if bakingstage == "BURNT"	;    "\i[350]"
+			elseif bakingstage == "BURNING"	;    "\i[340]"
+			elseif bakingstage == "CRUNCH"	;    "\i[330]"
+			elseif bakingstage == "toasty"	;    "\i[320]"
+			elseif bakingstage == "toasting";    "\i[311]"
+			elseif bakingstage == "DOUGH"	;    "\i[310]"
+		}
+	}
+}
+
+
+//Related variables for this:
+//cookingstage,timetoboil, oven, baking, bakingstage
+ OnViewGround : all
+{
+  "\0\s[0]"
+   ONVEN
+   if cooking == 1; "\i[600]"
+    
+	
+	if baking  == 1
+   {
+	   
+   }
+   else
+   {
+		 if breadpos == "floor"
+		{
+				if bakingstage == "BURNT";    "\i[150]"
+			elseif bakingstage == "BURNING";  "\i[140]"
+			elseif bakingstage == "CRUNCH";   "\i[130]"
+			elseif bakingstage == "toasty";   "\i[120]"
+			elseif bakingstage == "toasting"; "\i[111]"
+			elseif bakingstage == "DOUGH";    "\i[110]"
+		}
+		 elseif breadpos == "counter"
+		{
+				if bakingstage == "BURNT";    "\i[250]"
+			elseif bakingstage == "BURNING";  "\i[240]"
+			elseif bakingstage == "CRUNCH";   "\i[230]"
+			elseif bakingstage == "toasty";   "\i[220]"
+			elseif bakingstage == "toasting"; "\i[211]"
+			elseif bakingstage == "DOUGH";    "\i[210]"
+		}
+		 elseif breadpos == "oven"//iF THEYRE IN THE OVENNN
+		{
+				if bakingstage == "BURNT";    "\i[350]"
+			elseif bakingstage == "BURNING";  "\i[340]"
+			elseif bakingstage == "CRUNCH";   "\i[330]"
+			elseif bakingstage == "toasty";   "\i[320]"
+			elseif bakingstage == "toasting"; "\i[311]"
+			elseif bakingstage == "DOUGH";    "\i[310]"
+		}
+	}
+}
+
+//If the bread is in the oven when the door is opened, have it-- OVEN MENU!!!
+
+
+ ONVEN
+{
+	 if oven == "closed"
+	{oven = "open"; "\i[399]"}
+	 else
+	{oven = "closed"; "\i[398]"}
+}
+
+/*------------------- Set-up -------------------*/
+
+
+ OnMouseMove
+{
+  if reference3 == 0
+  {
+	 if reference4 != ""
+	  {
+		stroke++
+		if stroke >= 40
+		{
+			stroke = 0
+			if reference4 == "Bread"; petting
+		}
+	  } 
+		else; stroke = 0
+  }
+}
+ 
+ OnMouseDoubleClick
+{
+  if reference5 == 0
+  {
+	  if reference3 == 0
+	  {
+		   if reference4 == "above"  	 ; OnViewAbove
+		   if reference4 == "below"  	 ; OnViewGround
+		   if reference4 == "Bread" 	 ; OnMySandwitchIllHaveAMenu
+		   if reference4 == "close" 	 ; OnClose
+		   if reference4 == "CookingPot" ; OnPotMenu
+	  }
+  }
+}
+ 
+ OnMouseClick
+{
+  if reference5 == 0
+  {
+	  if reference3 == 0
+	  {
+		if reference4 == "minimize"	 ; Minimize
+		if reference4 == "water"	 {}
+		if reference4 == "clean"	 {}
+		if reference4 == "pot"		 ; STARTCOOKING
+		if reference4 == "settings"	 ; OnSettingsMenu
+		if reference4 == "Spoon"	 ; stirring	
+		if reference4 == "info"	 	 ; Breadventure
+		if reference4 == "Handle"	 ; ONVEN
+	  }
+  }
+}
