@@ -1,0 +1,40 @@
+descript
+{
+	version,1
+}
+
+surface0
+{
+ element0,base,surface10.png,0,0
+  //White
+  animation0.interval,bind
+  animation0.pattern0,overlay,100,0,0,0
+
+  //Black
+  animation1.interval,bind
+  animation1.pattern0,overlay,101,0,0,0
+
+  //Red
+  animation2.interval,bind
+  animation2.pattern0,overlay,102,0,0,0
+  
+  //Orange
+  animation3.interval,bind
+  animation3.pattern0,overlay,103,0,0,0
+
+  //Yellow
+  animation4.interval,bind
+  animation4.pattern0,overlay,104,0,0,0
+  
+   //Green
+  animation5.interval,bind
+  animation5.pattern0,overlay,105,0,0,0
+  
+  //Blue
+  animation6.interval,bind
+  animation6.pattern0,overlay,106,0,0,0
+  
+  //purple
+  animation7.interval,bind
+  animation7.pattern0,overlay,107,0,0,0
+}
