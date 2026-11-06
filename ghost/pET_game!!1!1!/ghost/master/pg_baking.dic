@@ -1,0 +1,87 @@
+
+//————————-COOKING-————————
+
+
+ STARTCOOKING
+{ 
+  if cookingstage == "RAW"; warning
+  else; cooking = 1; cookingstage = "FILL"; OnCookMenu
+}
+
+
+ Select.ToCook : all//When the actual cooking begins..
+{
+  cooksec 	   = 0 //makes sure the
+  cookmin 	   = 0 //cooktime gets 
+  cookhour	   = 0 //reset
+  cookingstage = "RAW"
+  TempatureMenu
+}
+
+ HourCheck
+{  
+  if passmin >= 59; passmin = 0; passhour++
+  if cookmin >= 59; cookmin = 0; cookhour++
+}
+
+
+ OnMinuteChange
+{
+  HourCheck
+}
+
+//cooksec cookmin  cookhour Tempature
+
+ OnSecondChange
+{  
+  //This makes the ghost notify when theres a bug :>> Written by zi! :D (Thank you zi)
+  if ARRAYSIZE(GETERRORLOG) > 0 { "\![raise,OnErrorAlert]"; return }
+  if passsec == 59 { passsec = 0; passmin++ }  else; passsec++
+  
+   case Tempature
+  {
+	 when "OFF" {/*┏ (゜ω゜)=👉) pauses the counter*/}
+	  others//If the burner is on
+	 {
+	     if cooksec == 59 { cooksec = 0; cookmin++ } else; cooksec++
+	   
+		  if timetoboil == 0
+		 {
+			  if StirCountDown == 0
+			 {
+			    if autos == "ON"; StirWarning
+			    else; Stirable
+			 }
+		  else; StirCountDown--
+		 }
+		 else; timetoboil--
+	 }
+  }
+}
+
+ Stirable
+{
+	if mini == 1; "\i[20000]" //Warning to mix soon!
+	else; "\i[700]"
+}
+
+ stirring
+{
+  StirTimer = StirCountDown
+  "\i[400]\e"//If i make the stirring animation the same number on surfaces 0 and 1 then maybe this wont need a check for which surface its on... probably 
+}
+
+
+ StirWarning
+{
+  "Stir now! with cookmin... test"
+  --
+  StirTimer = StirCountDown; "\i[400]\e"
+}
+
+/*
+ warning
+{
+  "This will restart your progress.\n\n\![*]\q[cancel,CANCEL]\n\n \![*]\q[continue anyways?,OnCookMenu]\e"
+}
+*/

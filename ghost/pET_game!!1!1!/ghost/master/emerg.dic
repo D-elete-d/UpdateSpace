@@ -1,0 +1,41 @@
+﻿//---------------------------Emergency Mode--------------------------
+
+//Sometimes as you're working on your ghost, you might break it. It won't respond to your clicks or hot keys, won't appear when you switch to and from it, or it pops up a big error window whenever it tries to run. This sounds very scary, but it can come down to something as simple as making a few typos while doing dialogue, and as soon as you fix those typos, your ghost will boot back up just fine without anything missing! So don't be terrified of breaking your ghost as you work on it, everyone does sometimes, and this file is just for that scenario.
+
+//This file is set aside as a back-up in case your ghost can't load up its normal .dic files. If it can't load .dic files, then it breaks. But with yaya_emerg.txt and this file, it'll have a backup .dic to load up to. This can give you some information about what happened without your ghost disappearing or becoming uninteractable.
+
+//If your ghost does break, I highly recommend using Tama Debugger to locate the error! I talk more about that on the troubleshooting page of the walkthrough - https://www.ashido.com/ukagaka/.
+
+//For the beginner user, there's really nothing you need to mess with in here. I wouldn't really mess with anything in here unless you really know what you're doing, honestly. So you can pass this file by and move on to other ones if you want! Just know it'll be there if your ghost breaks.
+
+
+//OnInitialize sets values the minute the .dic is read, such as switching to and from a ghost, booting a ghost, or things like that. 
+OnInitialize
+{
+    emergencyerrormessage = 1
+}
+
+//Runs every second, checking to see if the flag above was set.
+OnSecondChange
+{
+    if emergencyerrormessage == 1
+    {
+		//calls the function
+        "\![raise,OnEmergencyErrorAlert]"
+    }
+}
+
+//If you double-click the ghost, it will also raise the dialogue.
+OnMouseDoubleClick
+{
+    OnEmergencyErrorAlert
+}
+
+//Error notice
+OnEmergencyErrorAlert
+{
+	//clears the variable so it won't spam this message at you every second
+    ERASEVAR("emergencyerrormessage")
+	
+    "\_qThere's an error in the dic files and the ghost cannot completely load. Check the error log in the developer interface for details.\x"
+}
