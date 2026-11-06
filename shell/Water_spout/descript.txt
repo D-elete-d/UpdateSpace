@@ -1,0 +1,9 @@
+﻿seriko.alignmenttodesktop,right
+seriko.use_self_alpha,1
+
+charset,UTF-8
+type,shell
+name,Water Spout
+craftman,Cherrie
+craftmanurl,https://github.com/D-elete-d
+homeurl,https://raw.githubusercontent.com/D-elete-d/UpdateSpace/main/shell/Water_spout/
