@@ -1,4 +1,0 @@
-Charset,UTF-8
-type,shell
-name,Bow & Needle
-directory,SSP bow & needle_c
